@@ -7,4 +7,5 @@
     name = "Bibata-Modern-Classic";
     size = 20;
   };
+  wayland.windowManager.hyprland.settings.env = ["HYPRCURSOR_SIZE,20"];
 }

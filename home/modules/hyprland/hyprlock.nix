@@ -26,7 +26,6 @@
   };
 
   wayland.windowManager.hyprland.settings.bind = [
-    "SUPER,L,exec,hyprlock"
     "SUPER CTRL,Q,exec,hyprlock"
   ];
 }
