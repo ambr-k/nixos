@@ -57,18 +57,12 @@
       # https://gist.github.com/0atman/1a5133b842f929ba4c1e195ee67599d5
       set -e
       pushd /etc/nixos
-      if git diff --quiet; then
-        echo "No changes detected, exiting."
-        popd
-        exit 0
-      fi
       alejandra . &>/dev/null || (alejandra . ; echo "Formatting failed, exiting." && popd && exit 1)
       git diff -U0
       nh os switch --ask
-      message="''${1:-$(nixos-rebuild list-generations | grep current)}"
-      [[ -v nocommit ]] || git commit -am "$message"
+      [[ -v 1 ]] && (git commit -am "$1" && echo "Git Commit Successful") || echo "No Git Commit"
       popd
-      echo "Rebuild Succeeded: $message"
+      echo "Rebuild Succeeded: ''${1:-$(nixos-rebuild list-generations | grep current)}"
       notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
     '';
   };
