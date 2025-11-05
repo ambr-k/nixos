@@ -1,6 +1,4 @@
-{ wallpaper, ... }:
-{...}:
-{
+{wallpaper, ...}: {...}: {
   services.hyprpaper = {
     enable = true;
     settings = {

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
-{
-  home.packages = [ pkgs.discord-canary ];
+{pkgs, ...}: {
+  home.packages = [pkgs.discord-canary];
 }

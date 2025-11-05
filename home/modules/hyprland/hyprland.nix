@@ -1,5 +1,9 @@
-{ pkgs, inputs, system, ... }:
 {
+  pkgs,
+  inputs,
+  system,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -38,4 +42,6 @@
       ];
     };
   };
+
+  home.packages = [pkgs.libnotify];
 }

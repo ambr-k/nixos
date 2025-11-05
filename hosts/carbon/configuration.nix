@@ -1,6 +1,10 @@
-{ config, pkgs, inputs, system, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  system,
+  ...
+}: {
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.envy-code-r

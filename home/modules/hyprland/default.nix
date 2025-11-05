@@ -1,6 +1,4 @@
-{...}@hyprland_params:
-{...}:
-{
+{...} @ hyprland_params: {...}: {
   imports = [
     ./hyprland.nix
     ./hypridle.nix

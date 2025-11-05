@@ -1,5 +1,4 @@
-{...}:
-{
+{...}: {
   services.swayosd.enable = true;
   wayland.windowManager.hyprland.settings.bindl = [
     ",XF86AudioRaiseVolume,exec,swayosd-client --output-volume raise"

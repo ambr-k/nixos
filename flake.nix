@@ -27,39 +27,36 @@
     home-manager,
     aporetic-nerd-font,
     ...
-  }@inputs: let
-      system = "x86_64-linux";
-      specialArgs = {
+  } @ inputs: let
+    system = "x86_64-linux";
+    specialArgs = {
+      inherit system;
+      inherit inputs;
+      pkgs-unstable = import nixpkgs-unstable {
         inherit system;
-        inherit inputs;
-        pkgs-unstable = import nixpkgs-unstable {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
+        config.allowUnfree = true;
       };
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    };
   in {
     nixosConfigurations.carbon = nixpkgs.lib.nixosSystem {
-
       inherit specialArgs;
-      
-      modules = [
 
+      modules = [
         ./hosts/carbon
 
-        home-manager.nixosModules.home-manager {
+        home-manager.nixosModules.home-manager
+        {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "bak";
           home-manager.extraSpecialArgs = specialArgs;
           home-manager.users.amber = import ./home/users/amber;
         }
-
       ];
     };
   };
 }
-

@@ -1,5 +1,11 @@
-{ config, pkgs, pkgs-unstable, lib, inputs, ... }:
 {
+  config,
+  pkgs,
+  pkgs-unstable,
+  lib,
+  inputs,
+  ...
+}: {
   imports = [
     (import ../../modules/hyprland {
       wallpaper = "~/wallpapers/poly1.png";

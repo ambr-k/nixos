@@ -1,5 +1,8 @@
-{lib, pkgs, ... }:
 {
+  lib,
+  pkgs,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -62,12 +65,11 @@
       alejandra . &>/dev/null || (alejandra . ; echo "Formatting failed, exiting." && popd && exit 1)
       git diff -U0
       nh os switch --ask
-      message="$\{1:-$(nixos-rebuild list-generations | grep current)}"
+      message="''${1:-$(nixos-rebuild list-generations | grep current)}"
       [[ -v nocommit ]] || git commit -am "$message"
       popd
       echo "Rebuild Succeeded: $message"
       notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
     '';
   };
-
 }

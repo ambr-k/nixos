@@ -1,6 +1,4 @@
-{ lock_wallpaper, ... }:
-{...}:
-{
+{lock_wallpaper, ...}: {...}: {
   programs.hyprlock = {
     enable = true;
     settings = {
