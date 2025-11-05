@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   imports = [./chromium.nix];
+  wayland.windowManager.hyprland.settings.bind = ["SUPER,M,exec, chromium --new-window --app=https://open.spotify.com"];
   xdg.desktopEntries.spotify = {
     name = "Spotify";
     exec = "chromium --new-window --app=https://open.spotify.com";
