@@ -6,14 +6,16 @@
     portalPackage = null;
     settings = {
       monitor = [",preferred,auto,1.25"];
+      xwayland.force_zero_scaling = true;
+      env = [
+        "NIXOS_OZONE_WL,1"
+        "GDK_SCALE,2"
+      ];
       general.gaps_out = "5,10,10,10";
       general.gaps_in = "4";
       decoration.rounding = "8";
       decoration.blur.passes = 2;
       decoration.blur.special = true;
-      env = [
-        "NIXOS_OZONE_WL,1"
-      ];
       bind = [
         "SUPER,Return,exec,ghostty"
         "SUPER,F,exec,firefox"
