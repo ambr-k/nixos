@@ -8,6 +8,7 @@
     ../../modules/hyprland/start_locked.nix
     ../../modules/bibata-cursor.nix
     ../../modules/firefox.nix
+    ../../modules/spotify.nix
     ../../modules/discord.nix
     ../../modules/ghostty.nix
     ../../modules/zsh.nix
