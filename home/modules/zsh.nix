@@ -30,10 +30,17 @@
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
 
-  programs.btop.enable = true;
   programs.ripgrep.enable = true;
   programs.lazygit.enable = true;
   programs.eza.enable = true;
+
+  programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "dracula";
+      vim_keys = true;
+    };
+  };
 
   programs.nh = {
     enable = true;
