@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  lib,
+  inputs,
+  ...
+}: {
   imports = [inputs.vicinae.homeManagerModules.default];
 
   services.vicinae.enable = true;
@@ -14,5 +18,9 @@
       "noanim,vicinae"
     ];
     exec-once = ["vicinae server"];
+  };
+  systemd.user.services.vicinae = {
+    Service.Environment = lib.mkForce ["USE_LAYER_SHELL=0"];
+    Service.EnvironmentFile = lib.mkForce [];
   };
 }
