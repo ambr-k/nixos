@@ -462,7 +462,7 @@
   "menus.dashboard.shortcuts.left.shortcut1.icon": "󰈹 ",
   "menus.dashboard.shortcuts.left.shortcut2.icon": "  ",
   "menus.dashboard.shortcuts.left.shortcut3.icon": "  ",
-  "menus.dashboard.shortcuts.left.shortcut3.command": "discordcanary --enable-features=UseOzonePlatform --ozone-platform=wayland",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "discordcanary",
   "menus.dashboard.shortcuts.left.shortcut4.icon": "  ",
   "menus.dashboard.shortcuts.left.shortcut4.command": "walker",
   "menus.dashboard.directories.left.directory1.label": "󱂵 Home",

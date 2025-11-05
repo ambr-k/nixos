@@ -11,10 +11,13 @@
       decoration.rounding = "8";
       decoration.blur.passes = 2;
       decoration.blur.special = true;
+      env = [
+        "NIXOS_OZONE_WL,1"
+      ];
       bind = [
         "SUPER,Return,exec,ghostty"
         "SUPER,F,exec,firefox"
-        "SUPER,D,exec,discordcanary --enable-features-UseOzonePlatform --ozone-platform=wayland"
+        "SUPER,D,exec,discordcanary"
         "SUPER,Q,killactive"
         "ALT,F4,killactive"
         "SUPER CTRL ALT,Q,exit"

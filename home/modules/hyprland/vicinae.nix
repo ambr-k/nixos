@@ -10,6 +10,6 @@
       "ignorealpha 0, vicinae"
       "noanim,vicinae"
     ];
-    exec-once = [ "vicinae server" ];
+    exec-once = [ "USE_LAYER_SHELL=0 vicinae server" ];
   };
 }
