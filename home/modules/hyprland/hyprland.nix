@@ -35,6 +35,11 @@
         "SUPER SHIFT,1,movetoworkspacesilent,1"
         "SUPER SHIFT,2,movetoworkspacesilent,2"
         "SUPER SHIFT,3,movetoworkspacesilent,3"
+        "SUPER,mouse:274,togglefloating"
+      ];
+      bindm = [
+        "SUPER,mouse:272,movewindow"
+        "SUPER,mouse:273,resizewindow"
       ];
       animation = [
         "workspaces, 1, 4, default, slidevert"
