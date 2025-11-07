@@ -12,11 +12,9 @@
       lock_wallpaper = "~/wallpapers/poly4.png";
     })
     ../../modules/hyprland/start_locked.nix
-    ../../modules/bibata-cursor.nix
-    ../../modules/firefox.nix
-    ../../modules/spotify.nix
-    ../../modules/discord.nix
-    ../../modules/ghostty.nix
+    ../../modules/apps
+    ../../modules/apps/spotify.nix
+    ../../modules/apps/discord.nix
     ../../modules/zsh.nix
   ];
 

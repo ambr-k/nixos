@@ -40,8 +40,14 @@
         "workspaces, 1, 4, default, slidevert"
         "specialWorkspace, 1, 4, default, fade"
       ];
+      exec-once = [
+        "systemctl --user start hyprpolkitagent"
+      ];
+      windowrulev2 = [
+        "float, title:(Select what to share)"
+      ];
     };
   };
 
-  home.packages = [pkgs.libnotify];
+  home.packages = with pkgs; [libnotify hyprpolkitagent];
 }

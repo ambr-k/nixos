@@ -9,5 +9,6 @@
     (import ./hyprpaper.nix hyprland_params)
     ./swayosd.nix
     ./vicinae.nix
+    ./bibata-cursor.nix
   ];
 }
