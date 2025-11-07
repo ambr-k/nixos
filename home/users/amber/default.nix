@@ -8,7 +8,7 @@
 }: {
   imports = [
     (import ../../modules/hyprland {
-      wallpaper = "~/wallpapers/poly1.png";
+      wallpaper = "~/wallpapers/yuri-bike.jpg";
       lock_wallpaper = "~/wallpapers/poly4.png";
     })
     ../../modules/hyprland/start_locked.nix
