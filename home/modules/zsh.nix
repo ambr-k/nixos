@@ -11,7 +11,10 @@
     shellAliases = {
       ls = "eza";
       ll = "ls -l";
+      lg = "lazygit";
       cd = "z";
+      ".." = "cd ..";
+      "..." = "cd ../..";
       code = "hx";
       nixopts = ''manix "" | grep '^# ' | sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' | fzf --preview="manix '{}'"'';
       nixrb = "nh os switch --ask";

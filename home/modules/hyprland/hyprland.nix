@@ -22,6 +22,7 @@
       decoration.blur.special = true;
       bind = [
         "SUPER,Return,exec,ghostty"
+        "SUPER CTRL,Return,exec,[float] ghostty"
         "SUPER,F,exec,firefox"
         "SUPER,D,exec,discordcanary"
         "SUPER,Q,killactive"
