@@ -37,6 +37,8 @@
         "SUPER SHIFT,2,movetoworkspacesilent,2"
         "SUPER SHIFT,3,movetoworkspacesilent,3"
         "SUPER,mouse:274,togglefloating"
+        "SUPER,F11,fullscreen"
+        "SUPER,F12,togglefloating"
       ];
       bindm = [
         "SUPER,mouse:272,movewindow"
