@@ -73,7 +73,7 @@
       [[ -v 1 ]] && (git commit -am "$1" && echo "Git Commit Successful") || echo "No Git Commit"
       popd
       echo "Rebuild Succeeded: ''${1:-$(nixos-rebuild list-generations | grep current)}"
-      notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
+      command -v notify-send >/dev/null && notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available || true
     '';
   };
 }
