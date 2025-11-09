@@ -5,6 +5,15 @@
   system,
   ...
 }: {
+  boot = {
+    blacklistedKernelModules = ["r8169"];
+
+    extraModulePackages = with config.boot.kernelPackages; [
+      r8125
+    ];
+    kernelModules = ["r8125"];
+  };
+
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.envy-code-r
