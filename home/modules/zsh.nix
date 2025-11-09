@@ -32,6 +32,7 @@
 
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
+  programs.zellij.enable = true;
 
   programs.ripgrep.enable = true;
   programs.lazygit.enable = true;
