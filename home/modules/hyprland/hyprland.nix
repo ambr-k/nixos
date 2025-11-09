@@ -23,6 +23,8 @@
       bind = [
         "SUPER,Return,exec,ghostty"
         "SUPER CTRL,Return,exec,[float] ghostty"
+        "SUPER,B,exec,ghostty -e btop"
+        "SUPER CTRL,B,exec,[float] ghostty -e btop"
         "SUPER,F,exec,firefox"
         "SUPER,D,exec,discordcanary"
         "SUPER,Q,killactive"
