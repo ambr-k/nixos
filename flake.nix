@@ -42,10 +42,6 @@
       };
     };
     homeManagerDefaults = {
-      home-manager.useGlobalPkgs = true;
-      home-manager.useUserPackages = true;
-      home-manager.bacckupFileExtension = "bak";
-      home-manager.extraSpecialArgs = specialArgs;
     };
   in {
     nixosConfigurations.carbon = nixpkgs.lib.nixosSystem {
@@ -55,10 +51,13 @@
         ./hosts/carbon
 
         home-manager.nixosModules.home-manager
-        (homeManagerDefaults
-          // {
-            home-manager.users.amber = import ./home/users/amber/ui.nix;
-          })
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "bak";
+          home-manager.extraSpecialArgs = specialArgs;
+          home-manager.users.amber = import ./home/users/amber/ui.nix;
+        }
       ];
     };
 
@@ -67,10 +66,13 @@
       modules = [
         ./hosts/lithium
         home-manager.nixosModules.home-manager
-        (homeManagerDefaults
-          // {
-            home-manager.users.amber = import ./home/users/amber;
-          })
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "bak";
+          home-manager.extraSpecialArgs = specialArgs;
+          home-manager.users.amber = import ./home/users/amber;
+        }
       ];
     };
   };
