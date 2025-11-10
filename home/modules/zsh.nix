@@ -28,6 +28,7 @@
   xdg.configFile."starship.toml".source = lib.mkForce ./config/starship.toml;
 
   programs.helix.enable = true;
+  programs.helix.defaultEditor = true;
   xdg.configFile."helix/config.toml".source = lib.mkForce ./config/helix.toml;
 
   programs.zoxide.enable = true;
