@@ -5,7 +5,7 @@
 add_newline = true
 
 format = """
-$directory $git_branch $git_state $git_status
+$hostname$directory $git_branch $git_state $git_status
 ($jobs)$status$character
 """
 
@@ -41,3 +41,5 @@ format = "\\[[$time]($style)\\]"
 [fill]
 symbol = " "
 
+[hostname]
+format = "[$hostname: ]($style)"
