@@ -12,6 +12,8 @@
       r8125
     ];
     kernelModules = ["r8125"];
+
+    supportedFilesystems = ["ntfs"];
   };
 
   fonts.packages = with pkgs; [
