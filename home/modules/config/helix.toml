@@ -3,3 +3,4 @@ theme = "rose_pine_moon"
 [editor]
 mouse = false
 line-number = "relative"
+cursorline = true
