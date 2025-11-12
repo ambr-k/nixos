@@ -1,6 +1,6 @@
 {
   pkgs,
-  osConfig,
+  osConfig ? {networking.hostName = "carbon";},
   ...
 }: {
   programs.helix = {
