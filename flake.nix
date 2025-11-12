@@ -75,5 +75,13 @@
         }
       ];
     };
+
+    buildHomeManagerConfiguration = {modules, ...}: (home-manager.lib.homeManagerConfiguration {
+      pkgs = specialArgs.pkgs;
+      extraSpecialArgs = specialArgs;
+      modules = [
+        (import ./home/users/amber)
+      ] ++ modules;
+    });
   };
 }

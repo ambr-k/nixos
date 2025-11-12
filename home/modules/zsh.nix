@@ -34,6 +34,9 @@
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
   programs.zellij.enable = true;
+  programs.yazi.enable = true;
+  programs.bat.enable = true;
+  programs.less.enable = true;
 
   programs.ripgrep.enable = true;
   programs.lazygit.enable = true;
