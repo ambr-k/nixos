@@ -1,6 +1,6 @@
 {
   pkgs,
-  osConfig ? {networking.hostName = "carbon";},
+  osConfig,
   ...
 }: {
   programs.helix = {
@@ -18,7 +18,11 @@
       };
       language-server.nixd.config.nixd = let
         myFlake = ''(builtins.getFlake "/etc/nixos")'';
-        nixosOpts = "${myFlake}.nixosConfigurations.${osConfig.networking.hostName}.options";
+        hostname =
+          if osConfig ? networking.hostName
+          then osConfig.networking.hostName
+          else "carbon";
+        nixosOpts = "${myFlake}.nixosConfigurations.${hostname}.options";
       in {
         formatting.command = ["alejandra"];
         nixpkgs.expr = "import ${myFlake}.inputs.nixpkgs { }";
