@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  imports = [./helix/nixd.nix];
   programs.zsh.shellAliases = {
     nixopts = ''manix "" | grep '^# ' | sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' | fzf --preview="manix '{}'"'';
     nixrb = "nh os switch --ask";

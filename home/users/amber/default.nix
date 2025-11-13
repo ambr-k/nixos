@@ -1,13 +1,7 @@
-{
-  config,
-  pkgs,
-  pkgs-unstable,
-  lib,
-  inputs,
-  ...
-}: {
+{...}: {
   imports = [
-    ../../modules/zsh.nix
+    ../../modules/zsh
+    ../../modules/helix
   ];
 
   home.username = "amber";
