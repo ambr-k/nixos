@@ -4,5 +4,6 @@
     helix
     yazi
     bat
+    tree
   ];
 }
