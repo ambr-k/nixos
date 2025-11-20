@@ -13,7 +13,7 @@
         line-number = "relative";
         cursorline = true;
         inline-diagnostics = {
-          cursor-line = "error";
+          cursor-line = "warning";
         };
       };
     };
