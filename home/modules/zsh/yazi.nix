@@ -15,7 +15,6 @@
     plugins = {
       chmod = pkgs.yaziPlugins.chmod;
       git = pkgs.yaziPlugins.git;
-      lazygit = pkgs.yaziPlugins.lazygit;
     };
     keymap.mgr.prepend_keymap = [
       {
@@ -25,7 +24,7 @@
       }
       {
         on = ["g" "i"];
-        run = "plugin lazygit";
+        run = "shell --block -- lazygit";
         desc = "Run lazyzgit";
       }
     ];
