@@ -10,7 +10,14 @@
       data_dir = "/mnt/data";
       config_dir = "/mnt/data/copyparty";
     })
+    (import ../../system/docker/pihole.nix {
+      pihole_dir = "/pihole";
+    })
   ];
+
+  systemd.tmpfiles.settings."pihole_dir" = {
+    "/pihole" = {d.mode = "0777";};
+  };
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
