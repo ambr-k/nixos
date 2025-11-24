@@ -24,6 +24,8 @@
       # S-C-hjkl to resize
       "SUPER CTRL,L,layoutmsg, colresize +conf"
       "SUPER CTRL,H,layoutmsg, colresize -conf"
+      # S-C-; to fit all
+      "SUPER CTRL,SEMICOLON,layoutmsg, fit all"
       # S-Sh-hjkl to move columns
       "SUPER SHIFT,L,layoutmsg, swapcol r"
       "SUPER SHIFT,H,layoutmsg, swapcol l"
