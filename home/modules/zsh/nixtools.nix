@@ -11,7 +11,7 @@
       dates = "weekly";
       extraArgs = "--keep-since 3d --keep 5";
     };
-    flake = "/etc/nixos";
+    flake = "path:/etc/nixos";
   };
 
   home.packages = with pkgs; [
