@@ -40,7 +40,7 @@
   };
   home.sessionPath = ["$HOME/.local/bin"];
 
-  home.packages = with pkgs; [dig tree];
+  home.packages = with pkgs; [dig tree duf];
   programs.zellij.enable = true;
   programs.less.enable = true;
   programs.ripgrep.enable = true;
