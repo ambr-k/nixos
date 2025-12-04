@@ -16,6 +16,9 @@
     (import ../../system/docker/foundryvtt.nix {
       data_dir = "/foundryvtt";
     })
+    (import ../../system/docker/ddns-updater.nix {
+      data_dir = "/ddnsupdater";
+    })
   ];
 
   systemd.tmpfiles.settings."pihole_dir" = {
