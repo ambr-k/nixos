@@ -13,6 +13,9 @@
     (import ../../system/docker/pihole.nix {
       pihole_dir = "/pihole";
     })
+    (import ../../system/docker/foundryvtt.nix {
+      data_dir = "/foundryvtt";
+    })
   ];
 
   systemd.tmpfiles.settings."pihole_dir" = {
