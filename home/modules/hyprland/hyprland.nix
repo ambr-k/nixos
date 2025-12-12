@@ -9,6 +9,7 @@
     package = null;
     portalPackage = null;
     settings = {
+      input.numlock_by_default = true;
       monitor = [",preferred,auto,1.25"];
       xwayland.force_zero_scaling = true;
       env = [
