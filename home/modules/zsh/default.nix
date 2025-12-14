@@ -41,7 +41,7 @@
   };
   home.sessionPath = ["$HOME/.local/bin"];
 
-  home.packages = with pkgs; [dig tree duf];
+  home.packages = with pkgs; [dig tree duf chafa];
   programs.zellij.enable = true;
   programs.less.enable = true;
   programs.ripgrep.enable = true;

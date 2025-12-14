@@ -1,4 +1,6 @@
 {lib, ...}: {
+  imports = [./fzf-tab.nix];
+
   programs.fzf.enable = true;
 
   programs.zsh.initContent = lib.mkAfter ''
