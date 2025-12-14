@@ -41,8 +41,6 @@
         config.allowUnfree = true;
       };
     };
-    homeManagerDefaults = {
-    };
   in {
     nixosConfigurations.carbon = nixpkgs.lib.nixosSystem {
       inherit specialArgs;

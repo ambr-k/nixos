@@ -9,7 +9,7 @@ $hostname$directory $git_branch $git_state $git_status
 ($jobs)$status$character
 """
 
-right_format = "$time"
+right_format = "$nix_shell$time"
 
 [directory]
 truncation_symbol = "…/"
@@ -43,3 +43,8 @@ symbol = " "
 
 [hostname]
 format = "[$hostname: ]($style)"
+
+[nix_shell]
+format = "[($symbol $name) ]($style)"
+symbol = "󱄅"
+

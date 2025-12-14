@@ -29,6 +29,8 @@
       keys.normal."["."[" = ":buffer-previous";
       keys.normal."]"."]" = ":buffer-next";
       keys.normal."ret" = "goto_word";
+      keys.normal."=" = ":format";
+      keys.normal."+" = "format_selections";
       keys.normal."\\" = {
         "backspace" = ":bc";
         "b" = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name} && echo '---' && git blame -L %{cursor_line},%{cursor_line} %{buffer_name} --incremental | grep '^summary'";

@@ -2,6 +2,7 @@
   programs.zsh.shellAliases = {
     nixopts = ''manix "" | grep '^# ' | sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' | fzf --preview="manix '{}'"'';
     nixrb = "nh os switch --ask";
+    devshell = "nix develop -c $SHELL";
   };
 
   programs.nh = {
