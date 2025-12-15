@@ -3,7 +3,7 @@
     ./clapper.nix
     ./ghostty.nix
     ./loupe.nix
-    ./nautilus.nix
+    ./pcmanfm.nix
     ./firefox.nix
   ];
 }
