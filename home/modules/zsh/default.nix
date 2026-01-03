@@ -11,6 +11,7 @@
     ./lazygit.nix
     ./nixtools.nix
     ./starship.nix
+    ./widgets.nix
     ./yazi.nix
     ./zoxide.nix
   ];
@@ -28,15 +29,6 @@
 
     initContent = lib.mkAfter ''
       eval "$INITCMD";
-
-      function Resume {
-        zle push-input
-        fg
-        zle get-line
-        zle redisplay
-      }
-      zle -N Resume
-      bindkey "^Z" Resume
     '';
   };
   home.sessionPath = ["$HOME/.local/bin"];
