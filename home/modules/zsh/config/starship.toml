@@ -9,7 +9,7 @@ $hostname$directory $git_branch $git_state $git_status
 ($jobs)$status$character
 """
 
-right_format = "$nix_shell$time"
+right_format = "$python$nix_shell$time"
 
 [directory]
 truncation_symbol = "…/"
@@ -48,3 +48,7 @@ format = "[$hostname: ]($style)"
 format = "[($symbol $name) ]($style)"
 symbol = "󱄅"
 
+[python]
+format = "[($virtualenv) ]($style)"
+# symbol = ""
+detect_files = []
