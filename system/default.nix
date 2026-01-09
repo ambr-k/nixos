@@ -6,6 +6,7 @@
     ./i18n.nix
     ./kmscon.nix
     ./networking.nix
+    ./nh.nix
     ./systemd-boot.nix
     ./tools.nix
     ./zsh.nix
