@@ -5,8 +5,8 @@
     ports = [
       "53:53/tcp"
       "53:53/udp"
-      "80:80/tcp"
-      "443:443/tcp"
+      "880:80/tcp"
+      "8443:443/tcp"
     ];
     environment = {
       TZ = "America/Denver";
