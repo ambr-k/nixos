@@ -10,6 +10,7 @@
     portalPackage = null;
     settings = {
       input.numlock_by_default = true;
+      input.follow_mouse = 2;
       monitor = [",preferred,auto,1.25"];
       xwayland.force_zero_scaling = true;
       env = [
