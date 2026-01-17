@@ -3,6 +3,7 @@
     ./configuration.nix
     ../../system
     ../../system/nvidia.nix
+    ../../system/printing.nix
     ../../system/steam.nix
     ./hardware-configuration.nix
     ./networking.nix
