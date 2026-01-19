@@ -2,6 +2,7 @@
   imports = [
     ./configuration.nix
     ../../system
+    ../../system/docker
     ../../system/nvidia.nix
     ../../system/printing.nix
     ../../system/steam.nix
