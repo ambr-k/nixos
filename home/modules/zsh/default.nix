@@ -6,6 +6,7 @@
   imports = [
     ./bat.nix
     ./btop.nix
+    ./direnv.nix
     ./eza.nix
     ./fzf.nix
     ./lazygit.nix
