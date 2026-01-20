@@ -9,8 +9,8 @@
     env = [
       "GTK_THEME,Adwaita:dark"
     ];
-    windowrulev2 = [
-      "float,class:(pcmanfm)"
+    windowrule = [
+      "float on, match:class (pcmanfm)"
     ];
   };
   xdg.configFile."libfm/libfm.conf".source = ./libfm.conf;

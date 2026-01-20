@@ -56,8 +56,8 @@
       exec-once = [
         "systemctl --user start hyprpolkitagent"
       ];
-      windowrulev2 = [
-        "float, title:(Select what to share)"
+      windowrule = [
+        "float on, match:title (Select what to share)"
       ];
     };
   };

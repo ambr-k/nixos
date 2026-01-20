@@ -11,8 +11,8 @@
     env = [
       "GTK_THEME,Adwaita:dark"
     ];
-    windowrulev2 = [
-      "float,class:(org\\.gnome\\.Nautilus)"
+    windowrule = [
+      "float on, match:class (org\\.gnome\\.Nautilus)"
     ];
   };
 }

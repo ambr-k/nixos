@@ -11,13 +11,16 @@
       "SUPER,Space,exec,vicinae toggle"
       "SUPER CTRL ALT,Backslash,exec, vicinae server"
     ];
-    env = ["USE_LAYER_SHELL,0"];
-    layerrule = [
-      "blur,vicinae"
-      "ignorealpha 0, vicinae"
-      "noanim,vicinae"
-    ];
+    # env = ["USE_LAYER_SHELL,0"];
+    # layerrule = [
+    #   "blur,vicinae"
+    #   "ignorealpha 0, vicinae"
+    #   "noanim,vicinae"
+    # ];
     exec-once = ["vicinae server"];
+    windowrule = [
+      "stay_focused on, match:title (Vicinae Launcher)"
+    ];
   };
   systemd.user.services.vicinae = {
     Service.Environment = lib.mkForce ["USE_LAYER_SHELL=0"];
