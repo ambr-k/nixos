@@ -30,6 +30,8 @@
 
     initContent = lib.mkAfter ''
       eval "$INITCMD";
+
+      unsetopt share_history
     '';
   };
   home.sessionPath = ["$HOME/.local/bin"];
