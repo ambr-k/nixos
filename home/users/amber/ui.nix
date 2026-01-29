@@ -10,5 +10,8 @@
     ../../modules/apps/spotify.nix
     ../../modules/apps/discord.nix
     ../../modules/apps/stremio.nix
+    ../../modules/apps/music_library.nix
   ];
+
+  xdg.userDirs.enable = true;
 }
