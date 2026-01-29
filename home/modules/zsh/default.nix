@@ -38,7 +38,7 @@
 
   home.packages = with pkgs; [dig tree duf chafa];
   programs.zellij.enable = true;
-  xdg.configFile.".zellij/config.kdl".source = ./config/zellij.kdl;
+  xdg.configFile."zellij/config.kdl".source = ./config/zellij.kdl;
   programs.less.enable = true;
   programs.ripgrep.enable = true;
 }
