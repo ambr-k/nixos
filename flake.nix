@@ -54,7 +54,12 @@
           home-manager.useUserPackages = true;
           home-manager.backupFileExtension = "bak";
           home-manager.extraSpecialArgs = specialArgs;
-          home-manager.users.amber = import ./home/users/amber/ui.nix;
+          home-manager.users.amber = {...}: {
+            imports = [
+              ./home/users/amber/ui.nix
+              ./home/users/amber/copyparty_dirs.nix
+            ];
+          };
         }
       ];
     };
