@@ -4,10 +4,10 @@
   ];
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "SUPER,E,exec,pcmanfm"
+      "SUPER,E,exec,GTK_THEME=Adwaita:dark pcmanfm"
     ];
     env = [
-      "GTK_THEME,Adwaita:dark"
+      # "GTK_THEME,Adwaita:dark"
     ];
     windowrule = [
       "float on, match:class (pcmanfm)"
