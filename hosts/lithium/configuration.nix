@@ -19,6 +19,10 @@
     (import ../../system/docker/ddns-updater.nix {
       data_dir = "/ddnsupdater";
     })
+    (import ../../system/docker/navidrome.nix {
+      data_dir = "/navidrome";
+      music_dir = "/mnt/data/Music";
+    })
   ];
 
   systemd.tmpfiles.settings."pihole_dir" = {
