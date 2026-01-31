@@ -3,7 +3,7 @@
 
   fileSystems."/mnt/lithium" = {
     fsType = "davfs";
-    device = "https://lithium.amberk.xyz/";
+    device = "https://files.lithium.amberk.xyz/";
     options = ["uid=1000"];
   };
 
