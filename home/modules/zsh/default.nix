@@ -9,6 +9,7 @@
     ./direnv.nix
     ./eza.nix
     ./fzf.nix
+    ./git-crypt.nix
     ./lazygit.nix
     ./nixtools.nix
     ./starship.nix

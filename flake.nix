@@ -28,10 +28,12 @@
     aporetic-nerd-font,
     ...
   } @ inputs: let
+    secrets = builtins.fromJSON (builtins.readFile ./secrets.json);
     system = "x86_64-linux";
     specialArgs = {
       inherit system;
       inherit inputs;
+      inherit secrets;
       pkgs-unstable = import nixpkgs-unstable {
         inherit system;
         config.allowUnfree = true;
