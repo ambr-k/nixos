@@ -19,6 +19,7 @@
 
         lsp = {
           display-inlay-hints = true;
+          auto-signature-help = false;
         };
 
         inline-diagnostics = {
@@ -36,6 +37,8 @@
         "b" = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name} && echo '---' && git blame -L %{cursor_line},%{cursor_line} %{buffer_name} --incremental | grep '^summary'";
         "p" = [":n" ":insert-output poetry install" ":bc!" ":lsp-restart"];
       };
+
+      keys.insert."C-space" = "signature_help";
     };
   };
 }
