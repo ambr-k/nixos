@@ -59,7 +59,7 @@
           home-manager.users.amber = {...}: {
             imports = [
               ./home/users/amber/ui.nix
-              ./home/users/amber/copyparty_dirs.nix
+              ./home/users/amber/music_dir.nix
             ];
           };
         }
