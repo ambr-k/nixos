@@ -44,6 +44,13 @@ in {
       port = "4533";
       caddy = caddy "music";
     })
+
+    (import ../../system/docker/syncthing.nix {
+      config_dir = "/syncthing";
+      caddy = caddy "sync";
+      mounts = ["/mnt:/mnt"];
+      gui_addr = "0.0.0.0:8384";
+    })
   ];
 
   services.caddy.extraConfig = ''
