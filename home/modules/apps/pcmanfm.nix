@@ -4,7 +4,7 @@
   ];
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "SUPER,E,exec,GTK_THEME=Adwaita:dark pcmanfm"
+      "SUPER_SHIFT,E,exec,GTK_THEME=Adwaita:dark pcmanfm"
     ];
     env = [
       # "GTK_THEME,Adwaita:dark"

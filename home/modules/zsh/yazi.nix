@@ -44,4 +44,9 @@
       require("git"):setup()
     '';
   };
+
+  home.packages = with pkgs; [mediainfo imagemagick];
+  wayland.windowManager.hyprland.settings = {
+    bind = ["SUPER,E,exec,[float] ghostty --confirm-close-surface=false -e yazi"];
+  };
 }
