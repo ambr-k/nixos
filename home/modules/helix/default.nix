@@ -37,6 +37,14 @@
         "b" = ":sh git blame -L %{cursor_line},%{cursor_line} %{buffer_name} && echo '---' && git blame -L %{cursor_line},%{cursor_line} %{buffer_name} --incremental | grep '^summary'";
         "p" = [":n" ":insert-output poetry install" ":bc!" ":lsp-restart"];
       };
+      keys.normal."space" = {
+        # extend select to include next occurence
+        "n" = ["search_selection_detect_word_boundaries" "extend_search_next"];
+        # select all occurences
+        "N" = "@*%s<up><ret>";
+        # select whole word
+        "m" = "@miw";
+      };
 
       keys.insert."C-space" = "signature_help";
     };
