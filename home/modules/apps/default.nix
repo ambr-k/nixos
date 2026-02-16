@@ -5,5 +5,6 @@
     ./loupe.nix
     ./pcmanfm.nix
     ./firefox.nix
+    ./pinta.nix
   ];
 }
