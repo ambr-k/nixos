@@ -15,6 +15,7 @@
     plugins = {
       chmod = pkgs.yaziPlugins.chmod;
       git = pkgs.yaziPlugins.git;
+      mount = pkgs.yaziPlugins.mount;
     };
     keymap.mgr.prepend_keymap = [
       {
@@ -26,6 +27,10 @@
         on = ["g" "i"];
         run = "shell --block -- lazygit";
         desc = "Run lazyzgit";
+      }
+      {
+        on = ["M"];
+        run = "plugin mount";
       }
     ];
     settings.plugin.prepend_fetchers = [
@@ -47,6 +52,6 @@
 
   home.packages = with pkgs; [mediainfo imagemagick];
   wayland.windowManager.hyprland.settings = {
-    bind = ["SUPER,E,exec,[float] ghostty --confirm-close-surface=false -e yazi"];
+    bind = ["SUPER,E,exec,[float] ghostty --confirm-close-surface=false -e zsh -c yazi"];
   };
 }
