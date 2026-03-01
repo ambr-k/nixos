@@ -22,8 +22,8 @@
       decoration.rounding = "8";
       decoration.blur.passes = 2;
       decoration.blur.special = true;
-      misc.enable_swallow = true;
-      misc.swallow_regex = "com\.mitchellh\.ghostty";
+      # misc.enable_swallow = true;
+      # misc.swallow_regex = "com\.mitchellh\.ghostty";
       misc.focus_on_activate = true;
       bind = [
         "SUPER,Return,exec,ghostty"
