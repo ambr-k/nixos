@@ -1,7 +1,4 @@
-{pkgs-unstable, ...}: {
-  disabledModules = ["programs/nh.nix"];
-  imports = ["${pkgs-unstable.path}/nixos/modules/programs/nh.nix"];
-
+{...}: {
   programs.nh = {
     enable = true;
     clean = {

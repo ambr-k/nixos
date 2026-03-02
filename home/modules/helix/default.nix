@@ -1,11 +1,10 @@
-{pkgs-unstable, ...}: {
+{...}: {
   imports = [
     ./nixd.nix
   ];
 
   programs.helix = {
     enable = true;
-    package = pkgs-unstable.helix;
     defaultEditor = true;
     settings = {
       theme = "rose_pine_moon";

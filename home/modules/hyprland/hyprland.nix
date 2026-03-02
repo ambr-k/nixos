@@ -1,9 +1,4 @@
-{
-  pkgs,
-  inputs,
-  system,
-  ...
-}: {
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -27,7 +22,7 @@
       misc.focus_on_activate = true;
       bind = [
         "SUPER,Return,exec,ghostty"
-        "SUPER CTRL,Return,exec,[float] ghostty"
+        "SUPER CTRL,Return,exec,[float] ghostty -e $SHELL"
         "SUPER,B,exec,ghostty -e btop"
         "SUPER CTRL,B,exec,[float] ghostty -e btop"
         "SUPER,F,exec,firefox"

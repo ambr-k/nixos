@@ -2,9 +2,11 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      ipc = "on";
-      wallpaper = ", ${wallpaper}";
-      preload = wallpaper;
+      splash = false;
+      wallpaper = {
+        monitor = "";
+        path = wallpaper;
+      };
     };
   };
   wayland.windowManager.hyprland.settings.exec-once = ["hyprpaper"];

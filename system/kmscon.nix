@@ -1,6 +1,6 @@
 {
+  pkgs,
   inputs,
-  system,
   ...
 }: {
   services.kmscon = {
@@ -8,7 +8,7 @@
     fonts = [
       {
         name = "AporeticSerifMono Nerd Font";
-        package = inputs.aporetic-nerd-font.packages.${system}.aporetic-nerd-font;
+        package = inputs.aporetic-nerd-font.packages.${pkgs.stdenv.hostPlatform.system}.aporetic-nerd-font;
       }
     ];
     extraConfig = ''

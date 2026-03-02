@@ -48,6 +48,8 @@
     initLua = ''
       require("git"):setup()
     '';
+
+    shellWrapperName = "y";
   };
 
   home.packages = with pkgs; [mediainfo imagemagick];

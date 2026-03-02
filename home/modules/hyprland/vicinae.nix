@@ -1,29 +1,36 @@
 {
-  lib,
+  pkgs,
   inputs,
   ...
 }: {
-  imports = [inputs.vicinae.homeManagerModules.default];
-
-  services.vicinae.enable = true;
+  home.packages = with pkgs; [brotab playerctl];
+  programs.vicinae = {
+    enable = true;
+    settings = {
+      theme.dark.name = "rose-pine-moon";
+      launcher_window.opacity = 1;
+      font.normal.family = "AporeticSerifMonoNerdFont";
+      pop_to_root_on_close = true;
+    };
+    extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
+      brotab
+      nix
+      player-pilot
+    ];
+  };
   wayland.windowManager.hyprland.settings = {
     bind = [
       "SUPER,Space,exec,vicinae toggle"
+      "SUPER,C,exec,vicinae deeplink vicinae://extensions/vicinae/clipboard/history"
       "SUPER CTRL ALT,Backslash,exec, vicinae server"
     ];
-    # env = ["USE_LAYER_SHELL,0"];
-    # layerrule = [
-    #   "blur,vicinae"
-    #   "ignorealpha 0, vicinae"
-    #   "noanim,vicinae"
-    # ];
     exec-once = ["vicinae server"];
     windowrule = [
       "stay_focused on, match:title (Vicinae Launcher)"
     ];
-  };
-  systemd.user.services.vicinae = {
-    Service.Environment = lib.mkForce ["USE_LAYER_SHELL=0"];
-    Service.EnvironmentFile = lib.mkForce [];
+    layerrule = [
+      "blur on, ignore_alpha 0, match:namespace vicinae"
+      "animation popin, match:namespace vicinae"
+    ];
   };
 }

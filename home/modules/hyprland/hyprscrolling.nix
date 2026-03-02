@@ -1,10 +1,10 @@
 {
+  pkgs,
   inputs,
-  system,
   ...
 }: {
   wayland.windowManager.hyprland.plugins = [
-    inputs.hyprland-plugins.packages.${system}.hyprscrolling
+    inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprscrolling
   ];
 
   wayland.windowManager.hyprland.settings = {

@@ -13,13 +13,19 @@
 
   programs.git = {
     enable = true;
-    userName = "Amber Kirschbaum";
-    userEmail = "amber.fae.k@gmail.com";
-    extraConfig.credential.helper = lib.mkForce [
-      "cache --timeout 172800"
-      "manager"
-    ];
-    extraConfig.credential.credentialStore = "cache";
+    settings = {
+      user = {
+        name = "Amber Kirschbaum";
+        email = "amber.fae.k@gmail.com";
+      };
+      credential = {
+        helper = lib.mkForce [
+          "cache --timeout 172800"
+          "manager"
+        ];
+        credentialStore = "cache";
+      };
+    };
   };
   home.packages = [pkgs.git-credential-manager];
 

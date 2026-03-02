@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [beets nicotine-plus kew recordbox feishin picard];
+  home.packages = with pkgs; [v25_05.beets nicotine-plus kew recordbox feishin picard];
   xdg.configFile."beets/config.yaml".text = ''
     plugins: fetchart embedart edit discogs lyrics
 
