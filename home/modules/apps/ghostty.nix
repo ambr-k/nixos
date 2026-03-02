@@ -7,6 +7,7 @@
       window-padding-x = 5;
       window-padding-y = 5;
       window-padding-balance = true;
+      window-inherit-working-directory = false;
     };
   };
 }
