@@ -13,7 +13,6 @@
       pop_to_root_on_close = true;
     };
     extensions = with inputs.vicinae-extensions.packages.${pkgs.stdenv.hostPlatform.system}; [
-      brotab
       nix
       player-pilot
     ];
@@ -22,7 +21,8 @@
     bind = [
       "SUPER,Space,exec,vicinae toggle"
       "SUPER,C,exec,vicinae deeplink vicinae://extensions/vicinae/clipboard/history"
-      "SUPER CTRL ALT,Backslash,exec, vicinae server"
+      "SUPER SHIFT,apostrophe,exec,vicinae deeplink vicinae://extensions/brpaz/brotab/tabs-list"
+      "SUPER CTRL ALT,backslash,exec, vicinae server --replace"
     ];
     exec-once = ["vicinae server"];
     windowrule = [

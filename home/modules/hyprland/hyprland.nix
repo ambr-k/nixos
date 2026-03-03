@@ -25,7 +25,7 @@
         "SUPER CTRL,Return,exec,[float] ghostty -e $SHELL"
         "SUPER,B,exec,ghostty -e btop"
         "SUPER CTRL,B,exec,[float] ghostty -e btop"
-        "SUPER,F,exec,firefox"
+        "SUPER,apostrophe,exec,firefox"
         "SUPER,D,exec,discordcanary"
         "SUPER,Q,killactive"
         "ALT,F4,killactive"
