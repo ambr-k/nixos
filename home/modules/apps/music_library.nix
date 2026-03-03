@@ -9,4 +9,5 @@
   '';
 
   wayland.windowManager.hyprland.settings.exec-once = ["[workspace special silent] feishin"];
+  wayland.windowManager.hyprland.settings.bind = ["SUPER,slash,exec,feishin"];
 }
