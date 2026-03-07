@@ -8,6 +8,7 @@
     ../../system/steam.nix
     ../../system/hyprland.nix
     ../../system/gnome-keyring.nix
+    ../../system/sunshine.nix
     ./hardware-configuration.nix
     ./networking.nix
     ./users.nix

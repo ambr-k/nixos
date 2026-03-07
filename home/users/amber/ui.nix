@@ -9,6 +9,7 @@
     ../../modules/apps/spotify.nix
     ../../modules/apps/discord.nix
     ../../modules/apps/music_library.nix
+    ../../modules/sunshine.nix
   ];
 
   xdg.userDirs.enable = true;
