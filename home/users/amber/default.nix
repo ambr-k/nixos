@@ -20,10 +20,9 @@
       };
       credential = {
         helper = lib.mkForce [
-          "cache --timeout 172800"
           "manager"
         ];
-        credentialStore = "cache";
+        credentialStore = "secretservice";
       };
     };
   };

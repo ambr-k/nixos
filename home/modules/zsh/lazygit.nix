@@ -9,5 +9,5 @@
     };
   };
   # ensure git credential cache is running since lazygit can't start the cache itself
-  programs.zsh.shellAliases.lg = "echo '' | git credential-cache --timeout=172800 store && lazygit";
+  programs.zsh.shellAliases.lg = "lazygit";
 }
