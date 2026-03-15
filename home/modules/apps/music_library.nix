@@ -6,6 +6,7 @@
     lyrics:
       synced: yes
       force: yes
+      sources: [lrclib]
   '';
 
   wayland.windowManager.hyprland.settings.exec-once = ["[workspace special silent] feishin"];

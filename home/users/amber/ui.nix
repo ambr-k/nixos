@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./default.nix
     (import ../../modules/hyprland {
@@ -13,4 +13,6 @@
   ];
 
   xdg.userDirs.enable = true;
+
+  home.packages = with pkgs; [cockatrice bambu-studio];
 }
