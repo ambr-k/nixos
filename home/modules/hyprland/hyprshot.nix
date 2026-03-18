@@ -6,6 +6,7 @@
     "SUPER CTRL,S,exec,hyprshot -m window"
     "SUPER CTRL SHIFT,S,exec,hyprshot -m window --clipboard-only"
   ];
+  wayland.windowManager.hyprland.settings.layerrule = ["no_anim on, match:namespace selection"];
 
   xdg.configFile."swappy/config".text = ''
     [Default]
