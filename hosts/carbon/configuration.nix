@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   boot = {
@@ -10,7 +11,7 @@
     extraModulePackages = with config.boot.kernelPackages; [
       r8125
     ];
-    kernelModules = ["r8125" "i2c-dev"];
+    kernelModules = ["r8125" "i2c-dev" "uinput"];
 
     supportedFilesystems = ["ntfs"];
 
@@ -37,6 +38,21 @@
   services.hardware.openrgb = {
     enable = true;
   };
+
+  hardware.uinput.enable = true;
+  services.evdevremapkeys = {
+    enable = true;
+    settings.devices = [
+      {
+        input_phys = "usb-0000:00:14.0-4.1/input1";
+        output_name = "remap-elecom";
+        remappings = {
+          "BTN_FORWARD" = ["BTN_MIDDLE"];
+        };
+      }
+    ];
+  };
+  systemd.services.evdevremapkeys.serviceConfig.Group = lib.mkForce "uinput";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

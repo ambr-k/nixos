@@ -10,5 +10,6 @@
     ./swayosd.nix
     ./vicinae.nix
     ./bibata-cursor.nix
+    ./elecom_remap.nix
   ];
 }
