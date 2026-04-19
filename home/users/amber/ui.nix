@@ -10,6 +10,7 @@
     ../../modules/apps/discord.nix
     ../../modules/apps/music_library.nix
     ../../modules/sunshine.nix
+    ../../modules/kdeconnect.nix
   ];
 
   xdg.userDirs.enable = true;
