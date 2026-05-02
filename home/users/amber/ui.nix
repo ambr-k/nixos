@@ -15,5 +15,5 @@
 
   xdg.userDirs.enable = true;
 
-  home.packages = with pkgs; [cockatrice bambu-studio];
+  home.packages = with pkgs; [cockatrice bambu-studio pcsx2];
 }
