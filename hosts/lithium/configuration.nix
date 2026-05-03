@@ -65,6 +65,10 @@ in {
     }
   '';
 
+  services.caddy.virtualHosts."${lib.strings.concatMapStringsSep " " (d: "iot.${d}") domains}".extraConfig = lib.mkAfter ''
+    reverse_proxy http://neon.amberk.xyz:8123
+  '';
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
