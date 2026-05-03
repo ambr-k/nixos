@@ -56,6 +56,7 @@ in {
   services.caddy.extraConfig = ''
     ${lib.strings.concatMapStringsSep " " (d: "*.${d}") domains} {
       tls {
+        propagation_delay 120s
         propagation_timeout -1
         dns porkbun  {
           api_key ${secrets.porkbun.api_key}
