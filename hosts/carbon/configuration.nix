@@ -11,6 +11,7 @@
       r8125
     ];
     kernelModules = ["r8125" "i2c-dev"];
+    kernelPackages = pkgs.linuxPackages_latest;
 
     supportedFilesystems = ["ntfs"];
   };

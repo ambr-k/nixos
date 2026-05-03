@@ -38,6 +38,9 @@
     };
     pkgs-config = {...}: {
       nixpkgs.config.allowUnfree = true;
+      nixpkgs.config.permittedInsecurePackages = [
+        "openssl-1.1.1w"
+      ];
       nixpkgs.overlays = [
         (final: prev: {
           v25_05 = import nixpkgs-2505 {

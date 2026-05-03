@@ -1,4 +1,4 @@
-{...}: {
+{pkgs, ...}: {
   imports = [
     ./configuration.nix
     ../../system
@@ -7,4 +7,6 @@
     ./networking.nix
     ./users.nix
   ];
+
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 }
