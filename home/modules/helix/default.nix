@@ -22,7 +22,7 @@
         };
 
         inline-diagnostics = {
-          cursor-line = "warning";
+          cursor-line = "hint";
         };
       };
 
