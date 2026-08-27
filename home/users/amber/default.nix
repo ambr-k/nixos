@@ -26,7 +26,7 @@
       };
     };
   };
-  home.packages = [pkgs.git-credential-manager];
+  home.packages = [pkgs.git-credential-manager pkgs.ffmpeg];
 
   home.stateVersion = "25.05";
 }

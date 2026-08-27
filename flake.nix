@@ -76,6 +76,7 @@
           modules = [
             ./home/users/amber/ui.nix
             ./home/users/amber/music_dir.nix
+            ./home/users/amber/roms_dir.nix
           ];
         };
     };

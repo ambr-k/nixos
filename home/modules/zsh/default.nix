@@ -37,7 +37,7 @@
   };
   home.sessionPath = ["$HOME/.local/bin"];
 
-  home.packages = with pkgs; [dig tree duf chafa comma];
+  home.packages = with pkgs; [dig tree duf chafa comma just];
   programs.zellij.enable = true;
   xdg.configFile."zellij/config.kdl".source = ./config/zellij.kdl;
   programs.less.enable = true;

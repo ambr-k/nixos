@@ -2,6 +2,7 @@
   imports = [
     ./audio.nix
     ./bluetooth.nix
+    ./diskutils.nix
     ./enable_flakes.nix
     ./i18n.nix
     ./kmscon.nix
